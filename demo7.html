@@ -1,0 +1,34 @@
+<!--Javascript can can be used to validate an input:-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Please input a number between 1 and 100:</p>
+
+<input id="integer" type="number">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="validation_demo"></p>
+
+<script>
+function myFunction() {
+    var val, msg;
+
+    // Get the value of input field with id="numb"
+
+    val = document.getElementById("integer").value;
+
+    // If x is Not a Number or less than one or greater than 10
+
+    if (isNaN(val) || val < 1 || val > 100) {
+        msg = "Input is not valid";
+    } else {
+        msg = "Input is OK";
+    }
+    document.getElementById("validation_demo").innerHTML = msg;
+}
+</script>
+
+</body>
+</html> 
